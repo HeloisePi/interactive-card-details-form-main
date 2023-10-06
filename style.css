@@ -1,0 +1,332 @@
+*{
+    margin: 0%;
+    padding: 0;
+}
+section {
+    display: flex;
+}
+
+h1, h2, h3, p, input, label, button {
+    font-family: 'Space Grotesk';
+}
+
+
+
+/*              CSS POUR LES CARTES À GAUCHES           */
+
+.showCards {
+    z-index: 0;
+}
+.backgroundCards .desktop {
+    min-height: 100vh;
+}
+
+.mobile {
+    display: none;
+    width: 100vw;
+    height: 30vh;
+}
+.cards {
+    top: 20%;
+    position: absolute;
+    z-index: 10;
+    left: 10%;
+}
+.backCard {
+    transform: translate(-80%, 114%);
+}
+
+.round {
+    position: absolute;
+    transform: translate(25%, 60%);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.cardBigRound {
+    background-color: white;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.cardlittleRound{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.cardNumber{
+    position: absolute;
+    white-space: nowrap;
+    width: 23rem;
+    height: 3rem;
+    overflow: hidden;
+    color: white;
+    font-size: 2rem;
+    transform: translateY(-240%);
+    padding-left: 3rem;
+}
+
+
+.cardNameExpiration{
+    font-size: 1rem;  
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    transform: translateY(-240%);
+    padding-left: 3rem;
+    display: flex;
+    height: 1.2rem;
+   
+}
+.cardExpiration{
+    position: absolute;
+    transform: translateX(19rem);
+    display: flex;
+}
+
+.cardCvc{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    transform: translate(29rem, 9rem);
+}
+
+.cardName{
+    width: 18rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.cardMonth{
+    width: 1.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.cardYear{
+    width: 1.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.cardCvc{
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1.85rem;
+}
+
+@media screen and (max-width: 997px){
+    .backCard{
+        transform: translate(12%, 13%);
+    }
+    .cardCvc{
+        transform: translate(26rem, -6.5rem);
+    }
+}
+
+
+@media screen and (max-width: 800px){
+    section{
+        flex-direction: column;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .backCard{
+        transform: translate(-64%, -56%);
+        position: absolute;
+        z-index: -6;
+        width: 54vw;
+    }
+    .cardFront{
+        width: 54vw;
+    }
+    .cardCvc{
+        transform: translate(33rem, -17.20rem);
+    }
+    .cardBigRound{
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .cardlittleRound{
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .round{
+        gap: 2vw;
+    }
+
+    .cardNumber{
+        width: 45vw;
+        height: 5vw;
+        padding-left: 4vw;
+        font-size: 4vw;
+    }
+
+    .cardNameExpiration {
+        padding-left: 4vw;
+        height: 2.5vw;
+    }
+
+    .cardName {
+        width: 37vw;
+        height: 3vw;
+        font-size: 2vw;
+    }
+    .cardExpiration {
+        transform: translateX(38vw);
+        font-size: 2vw;
+    }
+    .cardMonth, .cardYear{
+        width: 2.8vw;
+        font-size: 2vw;
+    }
+    .cardCvc {
+        transform: translate(64vw, -33.5vw);
+        font-size: 2vw;
+    }
+
+    section .form{
+        width: 80vw;
+        transform: translateY(22vw);
+        margin: auto;
+    }
+    .dateExpirationCvC #dateExpiration input {
+        width: 17vw;
+    }
+    .dateExpirationCvC .cvc input {
+        width: 24vw;
+    }
+    .dateExpirationCvC {
+        gap: 0;
+    }
+
+    .attribution{
+        transform: translateY(17rem);
+    }
+
+}
+
+
+    
+
+
+/*                  CSS POUR LE FORMULAIRE                      */  
+
+.form{
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    transform: translate(18vw, 18rem);
+    gap: 2rem;
+}
+.completeForm{
+   align-items: center;
+}
+.completeForm p{
+    color: hsl(279, 6%, 55%);
+}
+.completeForm h2{
+    text-transform: uppercase;
+}
+
+.none{
+    display: none;
+}
+
+label{
+    color: hsl(278, 68%, 11%) ;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+}
+input{
+    height: 2.7rem;
+    border: 1px solid hsl(278, 94%, 30%);
+    border-radius: 5px;
+    padding-left: 1rem ;
+    color: hsl(278, 68%, 11%) ;
+    font-size: 1.2rem;
+}
+
+.submit{
+    width: 100%;
+    background-color: hsl(278, 68%, 11%);
+    border: none;
+    color: white;
+    height: 3.5rem;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    transition: 500ms;
+}
+
+.submit:hover{
+    opacity: 0.80;
+    
+}
+
+.inputGap{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#dateExpiration{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    
+}
+
+#dateExpiration div{
+    display: flex;
+    gap: 1rem;
+}
+
+#dateExpiration input{
+    width: 5rem;
+}
+
+.dateExpirationCvC{
+    display: flex;
+    gap: 1rem;
+}
+
+.cvc{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.cvc input{
+    width: 9rem;
+}
+
+.warning{
+    border: 2px solid hsl(0, 100%, 66%);
+    transition: 50ms;
+}
+
+.warning:focus{
+    outline: none;
+    border: 3px solid hsl(0, 100%, 66%);
+}
+
+.warningP{
+    color: hsl(0, 100%, 66%) ;
+}
+
+.warningDate{
+    white-space: nowrap;
+    position: absolute;
+    transform: translateY(4rem);
+}

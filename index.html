@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/style.css">
+  <title></title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section>
+
+    <div class="showCards">
+      <div class="backgroundCards">
+        <img  class="desktop"src="/images/bg-main-desktop.png" alt="backgroud">
+        <img class="mobile" src="/images/bg-main-mobile.png" alt="background">
+      </div>
+      <div class="cards">
+        <div class="round">
+          <div class="cardBigRound"></div>
+          <div class="cardlittleRound"></div>
+        </div>
+        
+        <img src="/images/bg-card-front.png" class="cardFront" alt="FrontCard">
+        <p class="cardNumber">0000 0000 0000 0000</p>
+        <div class="cardNameExpiration">
+          <p class="cardName">Jane Appleseed</p>
+          <div class="cardExpiration"><p class="cardMonth">00</p> /<p class="cardYear">00</p> </div>
+        </div>
+        <img class="backCard" src="/images/bg-card-back.png" alt="BackCard">
+        <p class="cardCvc">000</p>
+      </div>
+    </div>
+    <form class="form">
+      <div class="inputGap">
+        <label for="name">Cardholder Name</label>
+        <input id="inputName" class="input" type="text" placeholder="e.g. Jane Appleseed">
+        <p class="warningP"></p>
+      </div>
+      
+      <div class="inputGap">
+        <label for="number" >Card Number</label>
+        <input id="number" class="inputNumber input" type="text" size="2" placeholder="e.g. 1234 5678 9123 0000">
+        <p class="warningP"></p>
+      </div>
+      <div class="dateExpirationCvC">
+        <div id="dateExpiration">
+        <label for="dateExpiration">Exp. Date (MM/YY)</label>
+          <div>
+            <input class="inputMonth input" type="text" placeholder="MM">
+            <input class="inputYear input" type="text" placeholder="YY"><br><br>
+            <p class="warningP warningDate"></p>
+          </div>
+        </div>
+        <div class="cvc">
+          <label>CVC</label>
+          <input class="inputCvc input" type="text" placeholder="e.g. 123">
+          <p class="warningP"></p>
+        </div>
+      </div>
+      
+      <input type="submit" class="submit" value="Confirm"></button>
+    </form>
+    <div class="form completeForm none">
+      <div><img src="/images/icon-complete.svg" alt="icon complete"></div>
+      <h2>Thank you!</h2>
+      <p>We've added your card details</p>
+      <button class="submit">Continue</button>
+    </div>
+  </section>
+    
+    
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/HeloisePi">HeloisePi</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
